@@ -1,0 +1,22 @@
+Microblog
+
+1. This platform will allows users to host there blogs.
+2. user can read another bloggers blog 
+3. user can follow/unfollow anohter bloggers
+4. followers count can be seen by the users
+5. sign up functionality
+6. login functionality
+7. user can add, edit, delte blogs
+8. user can view the profile
+9. user cas view the profile of anohter bloggers, there complete work
+10. user can delete his entire profile, with or without data, 
+11. this platform will be GDPR compliant.
+12. notification service will be there, follower will received a mail once blogger post a new blog
+13. the ui will highly interactive
+
+technical requirements
+
+1. flask as a framework to manage the backend
+2. mongo db for database 
+3. gmail smtp server to send emails
+4. html, css, jinja templating

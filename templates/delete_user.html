@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Microblog-Delete Account</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar__brand">
+        <a href="/"
+          ><img
+            class="navbar__logo"
+            alt="The Microblog Logo"
+            src="/static/blog_01.svg"
+        /></a>
+        Microblog
+      </div>
+      <ul class="navbar__navigation">
+        <li class="navbar__navigation-item">
+          <a href="logout" class="navbar__link">Log Out </a>
+        </li>
+    </header>
+    <main class="main">
+      <section>
+        <h1>Delete Account</h1>
+        <p>Hello <strong>{{user}}</strong>, Are you sure you want to delete your account?</p>
+        <form action="delete_account" class="form" method="post">
+            <label >
+                <input type="radio" name="delete_option" value="deactivate" required>
+                Deactiavte my account
+            </label>
+            <br>
+            <label >
+                <input type="radio" name="delete_option" value="all_data" required>
+                Delete my account and all associated data
+            </label>
+            <br>
+            <button type="submit" class="form__submit">Delete Account</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <section id="left">
+          <div class="footer__column">
+            <a href="/user_page" class="footer__item">{{user}}</a>
+          </div>
+        </section>
+        <section id="right">
+          <div class="footer__column">
+            <a href="/" class="footer__item">Home</a>
+            <a href="/about" class="footer__item">About Microblog</a>
+          </div>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

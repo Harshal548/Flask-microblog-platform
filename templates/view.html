@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{entry['title']}}-Microblog</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar__brand">
+        <a href="/"
+          ><img
+            class="navbar__logo"
+            alt="The Microblog Logo"
+            src="/static/blog_01.svg"
+        /></a>
+        Microblog
+      </div>
+      <ul class="navbar__navigation">
+        <li class="navbar__navigation-item">
+          <a href="logout" class="navbar__link">Log Out </a>
+        </li>
+    </header>
+    <main class="main">
+      <section>
+        <article class="entry">
+            <div>
+                <h2 class="entry__title">{{entry['title']}}</h2>
+            </div>
+            <p class="entry__content">{{entry['content']}}</p>
+            <div>
+                <a href="/user_profile/{{entry['username']}}" class="entry__author"><h3>Authored by {{entry['author']}}</h3></a>
+            </div>
+
+        </article>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <section id="left">
+          <div class="footer__column">
+            <a href="/user_page" class="footer__item">{{user}}</a>
+          </div>
+        </section>
+        <section id="right">
+          <div class="footer__column">
+            <a href="/" class="footer__item">Home</a>
+            <a href="/about" class="footer__item">About Microblog</a>
+          </div>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

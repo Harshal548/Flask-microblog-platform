@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update-Microblog</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar__brand">
+        <a href="/"
+          ><img
+            class="navbar__logo"
+            alt="The Microblog Logo"
+            src="/static/blog_01.svg"
+        /></a>
+        Microblog
+      </div>
+      <ul class="navbar__navigation">
+        <li class="navbar__navigation-item">
+          <a href="logout" class="navbar__link">Log Out</a>
+        </li>
+      </ul>
+    </header>
+    <main class="main">
+      <section>
+        <h1>Update Blog Entry</h1>
+        <form class="form" method="post" action="/update_blog/{{entry._id}}">
+          <p class="form__input">
+            <label for="entry" class="form__label">Blog Tittle:</label>
+            <input
+              type="text"
+              id="updated_title"
+              name="updated_title"
+              class="form_textarea"
+              value="{{entry.title}}"
+            />
+          </p>
+          <p class="form__input">
+            <label for="entry" class="form__label">Blog Content:</label>
+            <input
+              type="text"
+              id="updated_content"
+              name="updated_content"
+              class="form_textarea"
+              value="{{entry.content}}"
+            />
+          </p>
+          <button type="submit" class="form__submit">Post a Blog</button>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__content">
+        <section id="left">
+          <div class="footer__column">
+            <a href="/user_page" class="footer__item">{{user}}</a>
+          </div>
+        </section>
+        <section id="right">
+          <div class="footer__column">
+            <a href="/" class="footer__item">Home</a>
+            <a href="/about" class="footer__item">About Microblog</a>
+          </div>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
