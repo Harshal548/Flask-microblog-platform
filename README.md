@@ -1,0 +1,1 @@
+A Flask-based microblogging platform with MongoDB, enabling users to create, share, and follow blogs, receive email notifications, and manage profiles with GDPR compliance. Includes a highly interactive UI built with HTML, CSS, and Jinja templating
